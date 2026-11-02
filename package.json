@@ -1,0 +1,55 @@
+{
+  "name": "mysql-lite-release",
+  "version": "1.0.0",
+  "description": "MySQL 轻量级客户端 - 简洁、快速、专注日常 MySQL 查询与管理",
+  "main": "dist/main/index.js",
+  "author": "mysql-lite",
+  "license": "MIT",
+  "scripts": {
+    "dev": "electron-vite dev",
+    "dev:debug": "electron-vite dev -- --remote-debugging-port=9222",
+    "build": "electron-vite build",
+    "pack:win": "electron-vite build && electron-builder --win nsis",
+    "typecheck": "tsc --noEmit -p tsconfig.node.json && vue-tsc --noEmit -p tsconfig.web.json",
+    "selftest": "electron-vite build && cmd /c \"set MYSQL_LITE_SELFTEST=1&& electron .\""
+  },
+  "build": {
+    "appId": "com.mysqllite.app",
+    "productName": "MySQL Lite",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist/**",
+      "package.json"
+    ],
+    "win": {
+      "target": [
+        "nsis"
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "shortcutName": "MySQL Lite"
+    }
+  },
+  "dependencies": {
+    "monaco-editor": "^0.57.0",
+    "mysql2": "^3.24.6",
+    "naive-ui": "^2.45.3",
+    "pinia": "^4.1.0",
+    "sql-formatter": "^15.9.0",
+    "vue": "^3.5.44"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "@vitejs/plugin-vue": "^6.0.10",
+    "electron": "^38.8.6",
+    "electron-builder": "^26.18.0",
+    "electron-vite": "^6.0.0",
+    "typescript": "^6.0.3",
+    "vite": "^8.3.5",
+    "vue-tsc": "^3.3.14"
+  }
+}

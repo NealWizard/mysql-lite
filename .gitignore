@@ -1,0 +1,27 @@
+# 依赖与构建产物（勿上传）
+node_modules/
+dist/
+release/
+release-clean/
+out/
+*.log
+*.tsbuildinfo
+
+# 本地/系统
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.local
+.env
+.env.*
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# 测试/调试临时输出
+scripts/.cdp-*/
+*.png
+!docs/**/*.png
