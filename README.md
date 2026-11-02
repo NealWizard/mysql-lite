@@ -1,6 +1,8 @@
 # MySQL Lite（MySQL 轻量级客户端）
 
-简洁、快速、专注日常 MySQL 查询与表结构管理的 Windows 桌面应用。
+简洁、快速、专注日常 MySQL 查询与表结构管理的 Windows 桌面应用。  
+维护者：[NealWizard](https://github.com/NealWizard) · [MIT License](LICENSE)
+
 技术栈：Electron 38 + Vue 3 + TypeScript + electron-vite 6 + naive-ui + Monaco Editor + mysql2。
 
 ## 功能

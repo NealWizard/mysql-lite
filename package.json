@@ -3,8 +3,16 @@
   "version": "1.0.0",
   "description": "MySQL 轻量级客户端 - 简洁、快速、专注日常 MySQL 查询与管理",
   "main": "dist/main/index.js",
-  "author": "mysql-lite",
+  "author": "NealWizard",
   "license": "MIT",
+  "homepage": "https://github.com/NealWizard/mysql-lite",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NealWizard/mysql-lite.git"
+  },
+  "bugs": {
+    "url": "https://github.com/NealWizard/mysql-lite/issues"
+  },
   "scripts": {
     "dev": "electron-vite dev",
     "dev:debug": "electron-vite dev -- --remote-debugging-port=9222",
@@ -16,6 +24,7 @@
   "build": {
     "appId": "com.mysqllite.app",
     "productName": "MySQL Lite",
+    "copyright": "Copyright © 2026 NealWizard",
     "directories": {
       "output": "release"
     },
